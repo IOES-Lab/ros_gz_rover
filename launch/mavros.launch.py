@@ -38,7 +38,8 @@ def generate_launch_description():
     mavros = Node(
         package="mavros",
         executable="mavros_node",
-        arguments=["--ros-args", "-p", "fcu_url:=udp://127.0.0.1:14551@14555"],
+        arguments=["--ros-args", "-p", "fcu_url:=udp://127.0.0.1:14550@14555"],
+        # arguments=["--ros-args", "-p", "fcu_url:=tcp://localhost"],
         parameters=[config],
         remappings=[
             ("/mavros/obstacle/send", "/sensors/laser_scan_frd"),
